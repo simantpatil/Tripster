@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:cardCornerRadius="@dimen/corner_radius_small">
+
+        <LinearLayout
+            android:id="@+id/travel_view_flipper_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_travel_height"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/travel_view_flipper_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/home_explore_item_travel_image"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/travel_view_flipper_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_smaller"
+                android:layout_marginEnd="@dimen/margin_smaller"
+                android:layout_marginTop="@dimen/margin_smaller"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/black"
+                android:fontFamily="@font/raleway_medium"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/travel_view_flipper_item_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginStart="@dimen/margin_smaller"
+                android:layout_marginEnd="@dimen/margin_smaller"
+                android:textSize="@dimen/text_smaller"
+                android:textColor="@color/darker_gray"
+                android:fontFamily="@font/raleway_medium"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginStart="@dimen/margin_half_small"
+                android:layout_marginBottom="@dimen/margin_regular"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/middle_icon_size"
+                    android:layout_height="@dimen/middle_icon_size"
+                    android:layout_marginEnd="@dimen/margin_tiniest"
+                    android:src="@drawable/ic_alarm_gray"
+                    android:contentDescription="@string/travel_created_date"/>
+
+                <TextView
+                    android:id="@+id/travel_view_flipper_item_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_regular"
+                    android:textSize="@dimen/text_smaller"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/raleway_regular"/>
+
+                <ImageView
+                    android:layout_width="@dimen/middle_icon_size"
+                    android:layout_height="@dimen/middle_icon_size"
+                    android:layout_marginEnd="@dimen/margin_tiniest"
+                    android:src="@drawable/ic_star_gray"
+                    android:contentDescription="@string/travel_popularity"/>
+
+                <TextView
+                    android:id="@+id/travel_view_flipper_item_popularity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_smaller"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/raleway_regular"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

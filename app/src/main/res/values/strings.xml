@@ -1,0 +1,471 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Tripster</string>
+
+    <string name="home">Home</string>
+    <string name="board">Board</string>
+    <string name="profile">Profile</string>
+    <string name="back_arrow">Back</string>
+    <string name="search">Search</string>
+
+    <string name="home_title">Hey!\nWhat are\nyour plans?</string>
+    <string name="home_camp">camp</string>
+    <string name="home_explore_item_travel_image">Travel Image</string>
+    <string name="home_explore_title">EXPLORE THE WORLD</string>
+    <string name="home_explore_more">EXPLORE MORE</string>
+    <string name="home_plan_to_visit">EXPLORE MAP\nAND\nPLAN TO VISIT</string>
+    <string name="home_search_friends">SEARCH\nFRIENDS</string>
+    <string name="home_search_travels">SEARCH\nTRAVELS</string>
+
+    <string name="search_friends_title">Search Friends</string>
+    <string name="search_friends_no_results">Oops, no results found.</string>
+
+    <string name="board_title">Welcome on board!</string>
+    <string name="board_desc">Start a new Journey</string>
+    <string name="board_airplane">AIRPLANE</string>
+    <string name="board_packing_ist">Packing List</string>
+    <string name="board_travel_weather_icon">WEATHER</string>
+    <string name="board_travel_grid_card_notes">NOTES</string>
+    <string name="board_travel_grid_card_photos">PHOTOS</string>
+    <string name="board_travel_grid_card_places">PLACES</string>
+    <string name="board_travel_grid_card_details">DETAILS</string>
+    <string name="board_travel_grid_card_budget">BUDGET</string>
+    <string name="board_travel_grid_card_explore">EXPLORE</string>
+
+    <string name="explore_title">Explore</string>
+    <string name="explore_nearby_places">Explore nearby places</string>
+
+    <string name="details_title">Details</string>
+    <string name="details_travel_image">Travel image</string>
+    <string name="details_detination_title">Destination</string>
+    <string name="details_departure_title">Departure</string>
+    <string name="details_arrival_title">Arrival</string>
+    <string name="details_budget_title">Budget</string>
+    <string name="details_accommodation_title">Accommodation</string>
+    <string name="details_accommodation_transport_contact_title">Contact</string>
+    <string name="details_accommodation_transport_file_title">File</string>
+    <string name="details_accommodation_transport_download_file"><u>Download file</u></string>
+    <string name="details_transport_title">Transport</string>
+    <string name="details_see_all_tags"><u>+ See all tags</u></string>
+    <string name="details_see_less_tags"><u>- See less tags</u></string>
+    <string name="details_edit_minor_details">Edit minor details</string>
+    <string name="details_end_travel">End travel</string>
+
+    <string name="dialog_edit_travel_details_title">Edit minor travel details</string>
+    <string name="dialog_edit_travel_details_desc">It\'s still possible to edit travel details that
+    are merely identification, social aspect</string>
+    <string name="dialog_edit_travel_details_name_title">NAME</string>
+    <string name="dialog_edit_travel_details_name_hint">Awesome 3 days trip in Mediolan</string>
+    <string name="dialog_edit_travel_details_image_title">IMAGE</string>
+    <string name="dialog_edit_travel_details_image_file_remove_button">Remove image</string>
+    <string name="dialog_edit_travel_details_tags_title">TAGS</string>
+    <string name="dialog_edit_travel_details_tags_hint">Beach, europe, culture, landscape…</string>
+
+    <string name="budget_title">Manage budget</string>
+    <string name="budget_expenses_no_results">No expenses found.\nAdd a new one by click +</string>
+    <string name="dialog_expense_remove_title">Remove expense</string>
+    <string name="dialog_expense_remove_desc">Are you sure you want to remove this expense?</string>
+    <string name="dialog_add_expense_title">Add expense</string>
+    <string name="dialog_add_expense_desc">Choose or create a category, enter amount and
+        choose if it\'s income or expenditure</string>
+    <string name="dialog_add_expense_category">Category</string>
+    <string name="dialog_add_expense_default_amount">0.0</string>
+
+    <string name="notes_title">Notes</string>
+    <string name="notes_no_results">No notes found.\nAdd a new one by click +</string>
+    <string name="dialog_notes_options_title">Options</string>
+    <string name="dialog_notes_options_edit">Edit</string>
+    <string name="dialog_notes_options_remove">Remove</string>
+    <string name="dialog_add_note_title">Add note</string>
+    <string name="dialog_add_note_desc">It can both a journal page and a daily diary,
+    quick note.\nWhatever you think of!</string>
+    <string name="dialog_remove_note_title">Remove note</string>
+    <string name="dialog_remove_note_desc">Are you sure you want to remove this note?</string>
+    <string name="dialog_edit_note_title">Edit note</string>
+    <string name="dialog_edit_note_desc">It can be both a journal page and a daily diary,
+    quick note.\nWhatever you think of!</string>
+
+    <string name="photos_title">Photos</string>
+    <string name="photos_no_results">No photos found.\nAdd a new one by click +</string>
+    <string name="photo">Photo</string>
+    <string name="dialog_add_photo_title">Add photo</string>
+    <string name="dialog_add_photo_desc">Add photo from your journey.\nIt\'s <b>optional</b>, but you
+        can describe the photo, what\'s in it or how you spent the day</string>
+    <string name="dialog_add_note_photo">Add photo</string>
+    <string name="dialog_edit_photo_title">Edit photo note</string>
+    <string name="dialog_edit_photo_desc">It\'s still possible to edit photo note. You can also leave
+    it empty - note is <b>optional</b></string>
+    <string name="dialog_remove_photo_title">Remove photo</string>
+    <string name="dialog_remove_photo_desc">Are you sure you want to remove this photo?</string>
+
+    <string name="places_title">Visited places</string>
+    <string name="places_no_results">No places found.\nAdd a new one by click +</string>
+    <string name="dialog_add_place_title">Add place</string>
+    <string name="dialog_add_place_desc">Search and add visited place.\nRate and <b>optionally</b>
+        describe it - what did you see, how was the place or anything what you want</string>
+    <string name="dialog_add_note_place_emoji_happy">EMOJI HAPPY</string>
+    <string name="dialog_add_note_place_emoji_normal">EMOJI NORMAL</string>
+    <string name="dialog_add_note_place_emoji_sad">EMOJI SAD</string>
+    <string name="dialog_add_note_place_emoji_lucky">EMOJI LUCKY</string>
+    <string name="dialog_add_note_place_emoji_shocked">EMOJI SHOCKED</string>
+    <string name="dialog_add_note_place_emoji_bored">EMOJI BORED</string>
+    <string name="dialog_remove_place_title">Remove place</string>
+    <string name="dialog_remove_place_desc">Are you sure you want to remove this place?</string>
+    <string name="dialog_edit_place_title">Edit place note</string>
+    <string name="dialog_edit_place_desc">It\'s still possible to edit place note. You can also leave
+    it empty - note is <b>optional</b></string>
+
+    <string name="map_title">Map</string>
+    <string name="map_show_saved_places">Show saved places</string>
+    <string name="map_nearby_places">Nearby places</string>
+    <string name="map_hide_saved_places">Hide saved places</string>
+
+    <string name="weather_title">Weather</string>
+    <string name="weather_current_weather_today">TODAY</string>
+    <string name="weather_current_weather_icon">WEATHER</string>
+    <string name="weather_celsius_degrees">°C</string>
+    <string name="weather_fahrenheit_degrees">°F</string>
+    <string name="weather_city_name">City name</string>
+    <string name="weather_search_city">Search city</string>
+
+    <string name="alarm_title">Alarm</string>
+    <string name="alarm_channel_info">Alarm channel</string>
+    <string name="dialog_alarm_perms_title">Additional Permissions</string>
+    <string name="dialog_alarm_perms_desc">
+        To fully use the alarm function, enable additional rights in the settings.
+    </string>
+    <string name="dialog_alarm_title">Set alarm</string>
+    <string name="dialog_alarm_date">DATE</string>
+    <string name="dialog_alarm_time">TIME</string>
+    <string name="dialog_alarm_note">NOTE</string>
+    <string name="alarm_no_alarms">No alarms set</string>
+    <string name="alarm_set_new_alarm">Set new alarm</string>
+    <string name="dialog_alarm_cancel_alarm">Cancel Alarm</string>
+
+    <string name="translator_title">Translator</string>
+    <string name="translator_swap">SWAP LANGUAGES</string>
+    <string name="translator_type_text_to_translate">Type text to translate</string>
+    <string name="translator_translate">Translate</string>
+    <string name="translator_translation">Translation</string>
+
+    <string name="currency_title">Currency\nconverter</string>
+    <string name="currency_amount_title">Amount</string>
+    <string name="currency_from">From</string>
+    <string name="currency_to">To</string>
+    <string name="currency_convert">Convert</string>
+    <string name="currency_swap">SWAP CURRENCY</string>
+    <string name="currency_result_title">Result</string>
+    <string name="currency_default_amount">0.0</string>
+
+    <string name="login_title">Start\nyour\nadventure</string>
+    <string name="login_email">EMAIL</string>
+    <string name="login_password">PASSWORD</string>
+    <string name="login_log_in">Log In</string>
+    <string name="login_image">Rocket</string>
+    <string name="login_OR_separator">OR</string>
+    <string name="login_forgot_password"><u>Forgot your password?</u></string>
+    <string name="login_no_acc_question">Don\'t have an account?</string>
+    <string name="login_no_acc_sign_up"><u>Sign up</u></string>
+
+    <string name="forgot_password_title">Forgot\nyour\npassword?</string>
+    <string name="forgot_password_info">
+        Don\'t worry! It\'s sometimes happens.
+        Just fill your email and we\'ll help you to reset your password.
+    </string>
+    <string name="forgot_password_image">Suitcase</string>
+    <string name="forgot_password_back"><u>Back to Login</u></string>
+    <string name="forgot_password_send">Send link</string>
+    <string name="forgot_password_email">EMAIL</string>
+
+    <string name="signup_title">Welcome\non\nBoard!</string>
+    <string name="signup_image">Van</string>
+    <string name="signup_username">USERNAME</string>
+    <string name="signup_email">EMAIL</string>
+    <string name="signup_password">PASSWORD</string>
+    <string name="signup_repeat_password">REPEAT PASSWORD</string>
+    <string name="signup_sign_up">Sign Up</string>
+    <string name="signup_account_question">Already have an account?</string>
+    <string name="signup_account_log_in"><u>Log in</u></string>
+    <string name="signup_back">Back to Login</string>
+
+    <string name="profile_sign_out">Sign out</string>
+    <string name="profile_settings">settings</string>
+    <string name="profile_notifications">Notifications</string>
+    <string name="profile_edit">Edit</string>
+    <string name="profile_image">User Image</string>
+    <string name="profile_username">Username</string>
+    <string name="profile_bio">Some words about you…</string>
+    <string name="profile_location">Location</string>
+    <string name="profile_contact">contact</string>
+    <string name="profile_my_email">my email</string>
+    <string name="profile_travels">travels</string>
+    <string name="profile_friends">friends</string>
+    <string name="profile_connect">connect</string>
+    <string name="profile_see_all_pref"><u>+ See all preferences</u></string>
+    <string name="profile_see_less_pref"><u>- See less preferences</u></string>
+
+    <string name="profile_settings_settings">Settings</string>
+    <string name="profile_settings_personal">PERSONAL</string>
+    <string name="profile_settings_personal_picture_title">Profile picture</string>
+    <string name="profile_settings_personal_picture_desc">Change your profile picture</string>
+    <string name="profile_settings_personal_bio_title">Bio</string>
+    <string name="profile_settings_personal_bio_desc">Update short description
+        about yourself</string>
+    <string name="profile_settings_personal_location_title">Location</string>
+    <string name="profile_settings_personal_location_desc">Set your current location
+        or let us find you</string>
+    <string name="profile_settings_personal_location_find_me">Find me</string>
+    <string name="profile_settings_personal_preferences_title">Preferences</string>
+    <string name="profile_settings_personal_preferences_desc">
+        Choose some preferences tags which you identify with
+    </string>
+    <string name="profile_settings_personal_save">Save personal changes</string>
+    <string name="profile_settings_account">ACCOUNT</string>
+    <string name="profile_settings_account_username_title">Username</string>
+    <string name="profile_settings_account_username_desc">Change your username</string>
+    <string name="profile_settings_account_username">USERNAME</string>
+    <string name="profile_settings_account_email_title">Email</string>
+    <string name="profile_settings_account_email_desc">Change your email address</string>
+    <string name="profile_settings_account_email_new_email">NEW EMAIL</string>
+    <string name="profile_settings_account_email_confirm_email">CONFIRM NEW EMAIL</string>
+    <string name="profile_settings_account_email_change">Change</string>
+    <string name="profile_settings_account_password_title">Password</string>
+    <string name="profile_settings_account_password_desc">Change your password</string>
+    <string name="profile_settings_account_password_current_password">CURRENT PASSWORD</string>
+    <string name="profile_settings_account_password_new_password">NEW PASSWORD</string>
+    <string name="profile_settings_account_password_confirm_password">CONFIRM NEW PASSWORD</string>
+    <string name="profile_settings_account_password_change">Change</string>
+    <string name="profile_settings_privacy">PRIVACY</string>
+    <string name="profile_settings_privacy_email_title">Email</string>
+    <string name="profile_settings_privacy_email_desc">Who can see your email?</string>
+    <string name="profile_settings_privacy_location_title">Location</string>
+    <string name="profile_settings_privacy_location_desc">Who can see your location?</string>
+    <string name="profile_settings_privacy_preferences_title">Preferences</string>
+    <string name="profile_settings_privacy_preferences_desc">Who can see your preferences?</string>
+    <string name="profile_settings_privacy_save">Save privacy changes</string>
+    <string name="profile_settings_about">ABOUT</string>
+    <string name="profile_settings_about_creator_title">Creator</string>
+    <string name="profile_settings_about_creator_desc">Raj Gawand</string>
+    <string name="profile_settings_about_credits_title">Credits</string>
+    <string name="profile_settings_about_credits_desc">Show credits and licenses</string>
+    <string name="profile_settings_about_version_title">Version</string>
+    <string name="profile_settings_about_version_desc">1.0</string>
+    <string name="profile_settings_help">HELP</string>
+    <string name="profile_settings_help_contact_title">Contact</string>
+    <string name="profile_settings_help_contact_desc">Feel free to contact with Us</string>
+    <string name="contact_email">rajgawand1211@gmail.com</string>
+
+    <string name="notifications_title">Notifications</string>
+    <string name="notifications_no_results">No notifications found.</string>
+    <string name="notifications_accept">Accept</string>
+    <string name="notifications_discard">Discard</string>
+    <string name="notifications_remove">REMOVE</string>
+    <string name="notifications_friends_request_message">sent friends request</string>
+    <string name="notifications_new_trip_request_message">has just begun a journey!</string>
+    <string name="notifications_end_trip_request_message">has just ended a journey!</string>
+
+    <string name="travels_list_title">Travels</string>
+    <string name="travels_list_mine">Mine</string>
+    <string name="travels_list_saved">Saved</string>
+    <string name="travels_list_no_results">No travels found.</string>
+
+    <string name="friends_list_title">Friends</string>
+    <string name="friends_list_remove">REMOVE</string>
+    <string name="friends_list_no_results">No friends found.</string>
+
+    <string name="plan_to_visit_title">Plan to visit</string>
+    <string name="plan_to_visit_remove">remove</string>
+    <string name="plan_to_visit_add">add</string>
+
+    <string name="dialog_unsaved_changes_title">Unsaved changes</string>
+    <string name="dialog_unsaved_changes_desc">
+        Your changes have not been saved. Do you want to discard the changes and continue?
+    </string>
+    <string name="dialog_my_email_title">Your contact email</string>
+    <string name="dialog_credits_title">Credits</string>
+    <string name="dialog_update_account_title">Welcome on Board, Traveller!</string>
+    <string name="dialog_update_account_desc">
+        Now you can start your own adventure!\n
+        &#127759; &#x2764; &#x270b;\nOops, but wait…\nIt looks like that your traveller\'s
+        account is still unfilled… &#x1f61e;\nWhen do you want to update it?
+    </string>
+    <string name="dialog_remove_friends_title">Remove from friends</string>
+    <string name="dialog_remove_friends_desc">Are you sure you want to remove</string>
+    <string name="dialog_add_marker_title">Add marker</string>
+    <string name="dialog_add_marker_desc">Make a short note about place</string>
+    <string name="dialog_remove_marker_title">Remove marker</string>
+    <string name="dialog_remove_marker_desc">Are you sure you want to remove this marker?</string>
+    <string name="dialog_choose_marker_color">Choose a marker color</string>
+    <string name="dialog_nearby_places_title">Type of places</string>
+    <string name="dialog_nearby_places_desc">Select what type of places you are looking for</string>
+
+    <string name="dialog_button_now">NOW</string>
+    <string name="dialog_button_later">LATER</string>
+    <string name="dialog_button_ok">OK</string>
+    <string name="dialog_button_yes">YES</string>
+    <string name="dialog_button_no">NO</string>
+    <string name="dialog_button_remove">REMOVE</string>
+    <string name="dialog_button_cancel" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="dialog_button_add">ADD</string>
+    <string name="dialog_button_search">SEARCH</string>
+    <string name="dialog_button_clear">CLEAR</string>
+    <string name="dialog_button_settings">SETTINGS</string>
+    <string name="dialog_button_no_thanks">NO THANKS</string>
+    <string name="dialog_button_previous">PREVIOUS</string>
+    <string name="dialog_button_next">NEXT</string>
+    <string name="dialog_button_save">SAVE</string>
+
+    <string name="create_travel_title">Create travel</string>
+    <string name="create_travel_stage_0_title">Hey Traveler!</string>
+    <string name="create_travel_stage_0_desc">Looks like you want to create a new journey.
+        That\'s awesome! This creator will guide you
+        step by step.\n\nLet\'s start from the beginning…
+    </string>
+    <string name="create_travel_stage_1_title">Name</string>
+    <string name="create_travel_stage_1_desc">Choose it wisely,\nit will identify your
+        journey in the future.
+    </string>
+    <string name="create_travel_stage_1_name_hint">Awesome 3 days trip in Mediolan</string>
+    <string name="create_travel_stage_2_title">Image</string>
+    <string name="create_travel_stage_2_desc">Upload picture which could also identify your journey.
+        It\'s <b>optional</b> but better to have one than not, right?
+    </string>
+    <string name="create_travel_stage_2_upload_image">Upload image</string>
+    <string name="create_travel_stage_2_upload_image_file_remove">Remove image</string>
+    <string name="create_travel_stage_3_title">Date and time</string>
+    <string name="create_travel_stage_3_desc_1">First of all, choose departure
+        date.\nIt\'s also good to plan approximate time, for example time on travel ticket
+    </string>
+    <string name="create_travel_stage_3_from_title">FROM</string>
+    <string name="create_travel_stage_3_to_title">TO</string>
+    <string name="create_travel_stage_3_desc_2">… and similar to arrival date and time.</string>
+    <string name="create_travel_stage_3_set_alarm_title">Set alarm to departure time</string>
+    <string name="create_travel_stage_4_title">Destination</string>
+    <string name="create_travel_stage_4_desc">Where are you going? Country, city, any other
+        specific place?
+    </string>
+    <string name="create_travel_stage_5_title">Transport</string>
+    <string name="create_travel_stage_5_desc">Select the type of transport,\nit will appear in the
+        travel tags.
+    </string>
+    <string name="create_travel_stage_5_transport_upload_file">Upload file</string>
+    <string name="create_travel_stage_5_transport_upload_file_desc"><b>Optionally,</b> you can
+        upload important file, such as ticket to keep it around.
+        \nAvailable type: image/pdf
+    </string>
+    <string name="create_travel_stage_5_transport_contact_desc">Also <b>optionally</b>, it\'s good
+        to have a contact, for example to carrier.
+    </string>
+    <string name="create_travel_stage_5_transport_contact_hint">Phone number, e-mail address…
+    </string>
+    <string name="create_travel_stage_5_file_remove">Remove file</string>
+    <string name="create_travel_stage_6_title">Accommodation</string>
+    <string name="create_travel_stage_6_desc">Select the type of accommodation,\nit will appear in
+        the travel tags.
+    </string>
+    <string name="create_travel_stage_6_accommodation_upload_file_desc"><b>Optionally,</b> you can
+        upload important file for booking to keep it around.
+    </string>
+    <string name="create_travel_stage_6_accommodation_upload_file">Upload file</string>
+    <string name="create_travel_stage_6_accommodation_contact_desc">Also <b>optionally</b>, it\'s good
+        to have some form of contact.
+    </string>
+    <string name="create_travel_stage_6_accommodation_contact_hint">Phone number, e-mail address…
+    </string>
+    <string name="create_travel_stage_6_file_remove">Remove file</string>
+    <string name="create_travel_stage_7_title">Budget</string>
+    <string name="create_travel_stage_7_desc">Enter total estimated budget for the trip including
+        accommodation, transport, meals, expenses… all of them.
+    </string>
+    <string name="create_travel_stage_8_title">Tags</string>
+    <string name="create_travel_stage_8_desc_1">Enter and choose tags that best suit your journey.
+        You can enter places, types, activities and more.
+    </string>
+    <string name="create_travel_stage_8_desc_2">Added tags will characterize your trip.</string>
+    <string name="create_travel_stage_8_tags_hint">Beach, europe, culture, landscape…</string>
+    <string name="create_travel_stage_9_finish">Finish</string>
+    <string name="create_travel_stage_9_desc">Check if all basic information entered is correct
+        by going back to previous stages.\nIf everything is OK, just press button.
+    </string>
+
+    <string name="dialog_packing_title">Packing List</string>
+    <string name="dialog_packing_desc">Would you like to create a packing list?</string>
+
+    <string name="packing_list_title">Packing List</string>
+    <string name="dialog_packing_list_remove_title">Remove list item</string>
+    <string name="dialog_packing_list_remove_desc">Are you sure you want to remove </string>
+    <string name="dialog_packing_list_finish_title">Finish packing</string>
+    <string name="dialog_packing_list_finish_desc">Are you already packed?
+        \nYou won\'t be able to open your luggage again!</string>
+    <string name="dialog_add_packing_item_title">Add item</string>
+    <string name="dialog_add_packing_item_desc">Enter a name\nand choose or create a category</string>
+    <string name="dialog_add_packing_item_category">Category</string>
+    <string name="dialog_add_packing_item_name">Name</string>
+
+    <string name="dialog_rate_day_title">Rate day</string>
+    <string name="dialog_rate_day_desc">How was your day, how did you enjoy it?</string>
+    <string name="dialog_rate_day_emoji_happy">EMOJI HAPPY</string>
+    <string name="dialog_rate_day_emoji_normal">EMOJI NORMAL</string>
+    <string name="dialog_rate_day_emoji_sad">EMOJI SAD</string>
+    <string name="dialog_rate_day_emoji_lucky">EMOJI LUCKY</string>
+    <string name="dialog_rate_day_emoji_shock">EMOJI SHOCK</string>
+    <string name="dialog_rate_day_emoji_bored">EMOJI BORED</string>
+
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+
+    <string name="dialog_end_travel_title">End travel</string>
+    <string name="dialog_end_travel_desc">You can still edit minor information in details section.\nAre
+        you sure you want to end your journey now?</string>
+    <string name="end_travel_title">End travel</string>
+    <string name="end_travel_desc">Now, after your whole journey the collected data will be used to
+        create one simple document.\nIt will be a return to memories and you will be able to share it
+        with others as a travel plan.</string>
+    <string name="end_travel_description_desc">Describe your trip in a short way, for example: what have you seen,
+        where have you been or your thoughts.</string>
+    <string name="end_travel_privacy_desc">Choose who will have access to created document.</string>
+    <string name="end_travel_privacy_finish_button">Finish &amp; create document</string>
+    <string name="messages_travel_ended_success">Your journey has ended, hope you had great time!</string>
+
+    <string name="travel_title">Travel</string>
+    <string name="travel_image">Travel image</string>
+    <string name="travel_destination_title">Destination</string>
+    <string name="travel_date_title">Date</string>
+    <string name="travel_file_title">File</string>
+    <string name="travel_file_value"><u>Download file</u></string>
+    <string name="travel_owner_title">Owner</string>
+    <string name="dialog_remove_my_travel_title">Remove travel</string>
+    <string name="dialog_remove_saved_travel_title">Remove saved travel</string>
+    <string name="dialog_remove_my_travel_desc">Are you sure you want to remove this travel?</string>
+    <string name="dialog_remove_saved_travel_desc">Are you sure you want to remove this saved travel?</string>
+    <string name="travels_list_edit_privacy">Edit privacy</string>
+    <string name="dialog_edit_privacy_title">Edit privacy</string>
+    <string name="dialog_edit_privacy_desc">Who will have access to your travel?</string>
+    <string name="travel_tags_see_all_tags">+ See all tags</string>
+    <string name="travel_tags_see_less_tags">- See less tags</string>
+    <string name="travel_save_travel">Save travel</string>
+    <string name="travel_saved_travel">Already saved travel</string>
+    <string name="travel_created_date">Created date</string>
+    <string name="travel_popularity">Popularity</string>
+
+    <string name="explore_more_travels_title">Explore more</string>
+    <string name="explore_more_travels_list_no_results">No travels found.</string>
+
+    <string name="search_travels_title">Search travels</string>
+    <string name="search_travels_list_no_results">No travels found.</string>
+    <string name="search_travels_filter">Filter list</string>
+
+    <string name="dialog_filter_travels_title">Filter travels</string>
+    <string name="dialog_filter_travels_desc">Choose filters to narrow search results.</string>
+    <string name="dialog_filter_travels_duration_title">DURATION</string>
+    <string name="dialog_filter_travels_duration_from_hint">From</string>
+    <string name="dialog_filter_travels_duration_to_hint">To</string>
+    <string name="dialog_filter_travels_destination_title">DESTINATION</string>
+    <string name="dialog_filter_travels_destination_hint">Country, city…</string>
+    <string name="dialog_filter_travels_tags_title">TAGS</string>
+    <string name="dialog_filter_travels_tags_hint">Beach, europe, culture…</string>
+
+    <string name="google_sign_in">Sign in with Google</string>
+    <string name="google_sign_up">Sign up with Google</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+</resources>

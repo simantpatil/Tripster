@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="isListEmpty"
+            type="Boolean" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/fragment_search_travels"
+        tools:context=".view.fragments.SearchTravelsFragment"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            tools:ignore="UselessParent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_regular">
+
+                <ImageView
+                    android:id="@+id/search_travels_arrow_button"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/back_arrow"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_arrow_back"/>
+
+                <TextView
+                    android:id="@+id/search_travels_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/search_travels_arrow_button"
+                    app:layout_constraintTop_toBottomOf="@+id/search_travels_arrow_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/robotoslab_medium"
+                    android:text="@string/search_travels_title"
+                    android:textSize="@dimen/text_bigger"
+                    android:textColor="@color/black"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/search_travels_search_view_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/search_travels_arrow_button"
+                    android:layout_marginTop="@dimen/margin_regular"
+                    android:background="@color/white"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="@dimen/cardview_default_elevation"
+                    app:cardCornerRadius="@dimen/corner_radius_tiny"
+                    tools:ignore="PrivateResource">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/search_travels_search_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:queryBackground="@color/white"
+                        app:queryHint="@string/search"
+                        app:iconifiedByDefault="false"
+                        android:showAsAction="always"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/search_travels_sort_filter_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/search_travels_search_view_layout"
+                    android:layout_marginTop="@dimen/margin_smaller"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/search_travels_filter_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_tiny"
+                        android:padding="@dimen/padding_small"
+                        app:rippleColor="@color/red_bg_light"
+                        app:backgroundTint="@color/main_red"
+                        android:text="@string/search_travels_filter"
+                        android:fontFamily="@font/raleway_bold"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/search_travels_sort_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_tiny"
+                        android:fontFamily="@font/raleway_medium"
+                        android:textSize="@dimen/text_smaller"
+                        app:ms_background_color="@color/dirty_white"
+                        app:ms_arrow_tint="@color/main_red"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/search_travels_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/search_travels_sort_filter_container"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="@dimen/margin_smaller"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                <TextView
+                    android:id="@+id/search_travels_list_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/search_travels_sort_filter_container"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="@dimen/margin_regular"
+                    android:textSize="@dimen/text_medium"
+                    android:textColor="@color/gray"
+                    android:text="@string/search_travels_list_no_results"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/raleway_medium"
+                    android:visibility="@{isListEmpty ? View.VISIBLE : View.GONE}"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/search_travels_progressbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:visibility="invisible">
+            <ProgressBar
+                android:id="@+id/search_travels_progressbar"
+                android:layout_width="@dimen/progressbar_size"
+                android:layout_height="@dimen/progressbar_size"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+    </FrameLayout>
+
+</layout>

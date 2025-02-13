@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="main_red">#EF9A7B</color>
+    <color name="main_yellow">#F5B343</color>
+    <color name="main_blue">#50BFEA</color>
+    <color name="main_green">#6BC6B1</color>
+    <color name="main_violet">#B184DC</color>
+    <color name="main_pink">#DE8AD1</color>
+
+    <color name="main_light_blue">#7DD0F0</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="dirty_white">#F9F9F9</color>
+    <color name="light_gray">#EEEEEE</color>
+    <color name="middle_gray">#DAD9D9</color>
+    <color name="gray">#B8B8B8</color>
+    <color name="dark_gray">#8D8D8D</color>
+    <color name="darker_gray">#4D4D4D</color>
+    <color name="black">#000000</color>
+
+    <color name="red_active">#EF9A7B</color>
+    <color name="red_inactive">#F7A080</color>
+    <color name="red_bg_lighter">#FEF1ED</color>
+    <color name="red_bg_light">#F8D3C7</color>
+    <color name="red_bg_dark">#E1B3A5</color>
+
+    <color name="yellow_active">#F5B343</color>
+    <color name="yellow_inactive">#F8CA7C</color>
+    <color name="yellow_bg_lighter">#FEF3E2</color>
+    <color name="yellow_bg_light">#F7E3C5</color>
+    <color name="yellow_bg_dark">#EBCDA2</color>
+
+    <color name="blue_active">#50BFEA</color>
+    <color name="blue_inactive">#7DD0F0</color>
+    <color name="blue_bg_lighter">#E4F5FC</color>
+    <color name="blue_bg_light">#C9E9F7</color>
+    <color name="blue_bg_dark">#A9D0E1</color>
+
+    <color name="green_bg_light">#AFE8DB</color>
+    <color name="green_bg_dark">#90D0C1</color>
+
+    <color name="violet_bg_light">#D6BDEE</color>
+    <color name="violet_bg_dark">#B091CD</color>
+
+    <color name="pink_bg_light">#EDC2E6</color>
+    <color name="pink_bg_dark">#DCA6D3</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/light_gray</color>
+
+    <color name="transparent">#66000000</color>
+    <color name="transparent_light">#10000000</color>
+
+    <color name="splash_background">#72C4E3</color>
+
+    <color name="error">#FF9494</color>
+
+    <color name="red">#CC0000</color>
+    <color name="green">#4BB543</color>
+
+</resources>

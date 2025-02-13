@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="user"
+            type="com.martynaroj.traveljournal.services.models.User"/>
+        <variable
+            name="loggedUser"
+            type="com.martynaroj.traveljournal.services.models.User"/>
+        <variable
+            name="location"
+            type="String"/>
+    </data>
+
+    <FrameLayout
+        android:id="@+id/fragment_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.ProfileFragment"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            tools:ignore="UselessParent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/profile_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_user_height"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@color/main_light_blue"/>
+
+                <ImageView
+                    android:id="@+id/profile_arrow_button"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="@dimen/margin_regular"
+                    android:layout_marginTop="@dimen/margin_regular"
+                    android:contentDescription="@string/back_arrow"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:visibility="@{!user.isUserProfile(loggedUser) ? View.VISIBLE : View.GONE}"
+                    android:src="@drawable/ic_arrow_back"/>
+
+                <ImageView
+                    android:id="@+id/profile_notifications"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/margin_regular"
+                    android:layout_marginEnd="@dimen/margin_regular"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="@string/profile_notifications"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:visibility="@{user.isUserProfile(loggedUser) ? View.VISIBLE : View.GONE}"
+                    android:src="@drawable/ic_notifications"/>
+
+                <TextView
+                    android:id="@+id/profile_notifications_badge"
+                    android:layout_width="@dimen/badge_size"
+                    android:layout_height="@dimen/badge_size"
+                    app:layout_constraintEnd_toEndOf="@id/profile_notifications"
+                    app:layout_constraintTop_toTopOf="@id/profile_notifications"
+                    android:padding="@dimen/padding_minimal"
+                    android:gravity="center"
+                    android:visibility="@{user.isUserProfile(loggedUser) &amp;&amp; user.hasNotifications() ? View.VISIBLE : View.GONE}"
+                    android:background="@drawable/notifications_badge"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile_user_details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="@dimen/margin_regular"
+                    android:layout_marginEnd="@dimen/margin_regular"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="@dimen/margin_tiny"
+                    android:background="@color/white"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="@dimen/cardview_default_elevation"
+                    app:cardCornerRadius="@dimen/corner_radius_tiny"
+                    tools:ignore="PrivateResource">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/profile_user_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/profile_user_details_height">
+
+                        <TextView
+                            android:id="@+id/profile_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="@+id/profile_user_details"
+                            app:layout_constraintEnd_toEndOf="@id/profile_user_details"
+                            app:layout_constraintTop_toTopOf="@id/profile_user_details"
+                            android:layout_marginTop="@dimen/margin_bigger"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textAlignment="center"
+                            android:text="@{user.username}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_big"/>
+
+                        <TextView
+                            android:id="@+id/profile_bio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="@+id/profile_user_details"
+                            app:layout_constraintEnd_toEndOf="@id/profile_user_details"
+                            app:layout_constraintTop_toBottomOf="@id/profile_username"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:fontFamily="@font/raleway_medium"
+                            android:text="@{user.bio}"
+                            android:textAlignment="center"
+                            android:visibility="@{user.bio == null ? View.GONE : View.VISIBLE}"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/text_regular"/>
+
+                        <TextView
+                            android:id="@+id/profile_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="@+id/profile_user_details"
+                            app:layout_constraintEnd_toEndOf="@id/profile_user_details"
+                            app:layout_constraintTop_toBottomOf="@id/profile_bio"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:fontFamily="@font/raleway_bold"
+                            android:text="@{location}"
+                            android:textAlignment="center"
+                            android:visibility="@{user.isLocationAvailableForUser(loggedUser) &amp;&amp; location != null ? View.VISIBLE : View.GONE}"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/text_regular"
+                            android:gravity="center"
+                            android:drawableStart="@drawable/ic_location"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/profile_contact"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/padding_small"
+                                app:backgroundTint="@color/light_gray"
+                                android:fontFamily="@font/raleway_regular"
+                                android:text="@{user.isUserProfile(loggedUser) ? @string/profile_my_email : @string/profile_contact}"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/text_smaller"
+                                android:drawableTop="@drawable/ic_email"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:insetRight="0dp"
+                                android:insetLeft="0dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:alpha="@{user.isEmailAvailableForUser(loggedUser) ? 1.0f : 0.4f}"
+                                app:cornerRadius="0dp"
+                                android:enabled="@{user.isEmailAvailableForUser(loggedUser) ? true : false}"
+                                android:layout_weight="1"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/profile_travels"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/padding_small"
+                                app:backgroundTint="@color/light_gray"
+                                android:fontFamily="@font/raleway_regular"
+                                android:text="@string/profile_travels"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/text_smaller"
+                                android:drawableTop="@drawable/ic_card_travel"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:insetRight="0dp"
+                                android:insetLeft="0dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                app:cornerRadius="0dp"
+                                android:layout_weight="1"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/profile_friends"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/padding_small"
+                                app:backgroundTint="@color/light_gray"
+                                android:fontFamily="@font/raleway_regular"
+                                android:text="@{user.isUserProfile(loggedUser) || user.hasFriend(loggedUser)  ? @string/profile_friends : @string/profile_connect}"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/text_smaller"
+                                android:drawableTop="@drawable/ic_people"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:insetRight="0dp"
+                                android:insetLeft="0dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:alpha="@{loggedUser != null ? 1.0f : 0.4f}"
+                                android:enabled="@{loggedUser != null ? true : false}"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                app:cornerRadius="0dp"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/profile_user_image_size"
+                    android:layout_height="@dimen/profile_user_image_size"
+                    app:layout_constraintStart_toStartOf="@+id/profile_user_details_layout"
+                    app:layout_constraintEnd_toEndOf="@+id/profile_user_details_layout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/profile_user_image_margin_top"
+                    android:contentDescription="@string/profile_image"
+                    app:imageUrl="@{user.photo}"
+                    android:elevation="@dimen/elevation_small"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/white"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="10dp"
+                    app:civ_shadow_color="@color/gray"
+                    tools:ignore="UnusedAttribute" />
+
+                <com.greenfrvr.hashtagview.HashtagView
+                    android:id="@+id/profile_preferences"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_user_hashtag_view_height"
+                    android:layout_marginTop="@dimen/margin_regular"
+                    android:layout_marginStart="@dimen/margin_regular"
+                    android:layout_marginEnd="@dimen/margin_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_user_details_layout"
+                    app:tagTextGravity="center"
+                    app:tagMargin="@dimen/margin_smaller"
+                    app:rowMargin="@dimen/margin_smaller"
+                    app:tagPaddingBottom="@dimen/padding_tiny"
+                    app:tagPaddingLeft="@dimen/padding_tiny"
+                    app:tagPaddingTop="@dimen/padding_tiny"
+                    app:tagPaddingRight="@dimen/padding_tiny"
+                    app:tagBackground="@drawable/oval_background_hashtag"
+                    app:tagForeground="?android:attr/selectableItemBackground"
+                    app:tagTextSize="@dimen/text_small"
+                    app:tagTextColor="@color/dark_gray"
+                    android:visibility="@{user.isPreferencesAvailableForUser(loggedUser) &amp;&amp; user.preferencesSize > 0 ? View.VISIBLE : View.GONE}"/>
+
+                <TextView
+                    android:id="@+id/profile_see_all_preferences"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_preferences"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:fontFamily="@font/raleway_bold"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/main_blue"
+                    android:layout_gravity="center"
+                    android:text="@string/profile_see_all_pref"
+                    android:visibility="@{user.isPreferencesAvailableForUser(loggedUser) &amp;&amp; user.preferencesSize > 55 ? View.VISIBLE : View.GONE}"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_see_all_preferences"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_settings_button"
+                    android:visibility="@{user.preferences == null ? View.GONE : View.VISIBLE}"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/profile_settings_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_sign_out_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/margin_regular"
+                    android:layout_marginEnd="@dimen/margin_regular"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/profile_settings"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/raleway_bold"
+                    app:backgroundTint="@color/main_blue"
+                    android:visibility="@{user.isUserProfile(loggedUser) ? View.VISIBLE : View.GONE}"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/profile_sign_out_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginBottom="@dimen/margin_regular"
+                    android:layout_marginStart="@dimen/margin_regular"
+                    android:layout_marginEnd="@dimen/margin_regular"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/profile_sign_out"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/raleway_bold"
+                    app:backgroundTint="@color/main_blue"
+                    android:visibility="@{user.isUserProfile(loggedUser) ? View.VISIBLE : View.GONE}"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/profile_progressbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:visibility="invisible">
+            <ProgressBar
+                android:id="@+id/profile_progressbar"
+                android:layout_width="@dimen/progressbar_size"
+                android:layout_height="@dimen/progressbar_size"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+    </FrameLayout>
+
+</layout>

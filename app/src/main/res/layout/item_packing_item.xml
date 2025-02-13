@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ripple_packing_item"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+
+    <CheckBox
+        android:id="@+id/packing_item_check"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_regular"
+        android:theme="@style/CheckBox"
+        android:layout_marginStart="@dimen/margin_tiniest"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:focusable="false"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/packing_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_regular"
+        android:fontFamily="@font/raleway_regular"
+        android:textSize="@dimen/text_small"
+        android:textColor="@color/black"
+        android:layout_weight="7"/>
+
+</LinearLayout>
